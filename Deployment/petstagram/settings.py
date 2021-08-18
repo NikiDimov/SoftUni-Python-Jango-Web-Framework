@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+import cloudinary as cloudinary
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
@@ -137,3 +139,10 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media_files'
 
 AUTH_USER_MODEL = 'accounts.PetstagramUser'
+
+cloudinary.config(
+    cloud_name="dusbtkkd3",
+    api_key="598851629271289",
+    api_secret="JqDwX3M4W5tiyNaREbaNtmw0QXs",
+    secure=True
+)
